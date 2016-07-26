@@ -1,4 +1,9 @@
 #!/bin/bash
+
+#need to add case --create_file
+#let gb="1024*$2"
+#dd if=/dev/urandom of=$1 bs=1024 count=$gb
+
 if [ -z $1 ]
 then 
 	echo "partition must be specified"
@@ -22,3 +27,5 @@ else
     echo "cryptsetup luksClose $cp"
     cryptsetup luksClose $cp
 fi
+
+
